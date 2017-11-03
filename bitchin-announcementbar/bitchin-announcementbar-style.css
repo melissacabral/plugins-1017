@@ -1,0 +1,65 @@
+#bitchin_announcement{
+	background: #444469;
+	color: #FFF;
+	z-index:9999;
+	box-shadow: 0 5px 0 0 rgba(0,0,0,.1); 
+	font-size: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 15px;
+}
+
+#bitchin_announcement.is_sticky{
+	position:fixed;
+	margin: 0;
+	width: 100%;
+}
+
+.admin-bar #bitchin_announcement{
+	top: 46px;
+}
+
+#bitchin_announcement p{
+	line-height: 40px;
+	margin: 0 0 10px;
+}
+
+#bitchin_announcement a{
+	background: crimson;
+	color: #FFF;
+	padding: 10px;
+	display: inline-block;
+	font-size: 16px;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+@media only screen and (min-width:783px){
+
+	#bitchin_announcement{
+		text-align: left;
+	}
+
+	.admin-bar #bitchin_announcement{
+		top: 32px;
+	}
+
+	#bitchin_announcement:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	#bitchin_announcement p{
+		line-height: 40px;
+		height: 40px;
+		/* prevent users from putting too much text on call to actions */
+		overflow: hidden;
+		float: left;
+		margin: 0;
+	}
+
+	#bitchin_announcement a{
+		float: right;
+	}
+}
